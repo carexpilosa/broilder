@@ -7,7 +7,8 @@ class Test extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0
+      counter: 0,
+      bla: '###'
     };
     this.boundCallBackFct = this.callBackFct.bind(this);
     console.log(this);
