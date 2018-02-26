@@ -118,12 +118,17 @@ class Sub extends React.Component {
 
   renderMultiple() {
     const { list, multiInputValues } = this.state;
+    console.log(multiInputValues);
     return <div>
       Da geht er:
       <datalist id="myDatalist">
         {
           list.map((entry, idx) => {
-            return <option key={idx} value={entry} />;
+            return (
+              <option key={idx} value={entry}>
+                { multiInputValues.includes(entry) ? 'ausgewählt' : null }
+              </option>
+            );
           })
         }
       </datalist>
@@ -146,7 +151,7 @@ class Sub extends React.Component {
               })
               : null
           }
-          <input style={{flex: '10 10 30px', height: '28px'}}
+          <input style={{flex: '10 0 30px', height: '28px'}}
             type="search" list="myDatalist" onChange={ e => this.multiOnChange(e) }/>
         </div>
       </div>
@@ -163,10 +168,12 @@ class Sub extends React.Component {
   multiOnChange(e)  {
     const val = e.target.value;
     const { multiInputValues, list } = this.state;
-    if(list.includes(val) && !multiInputValues.includes(val)) {
+    if(list.includes(val)) {
       e.target.value = '';
-      const newList = [ ...multiInputValues, val ];
-      this.setState({multiInputValues: newList });
+      if(!multiInputValues.includes(val)) {
+        const newList = [ ...multiInputValues, val ];
+        this.setState({multiInputValues: newList });
+      }
     }
   }
 
