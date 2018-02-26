@@ -1,1 +1,1 @@
-# boilerplate test: redux store
+# boilerplate test: redux store and multiselect tests
