@@ -3,3 +3,23 @@
 .divStyle {
   background-color: yellow;
 }
+
+.multiInput, .multiInput:active {
+  border: none;
+  color: red;
+}
+
+.containerDiv {
+  border: 1px solid grey;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.flexContainer > div {
+  border: 1px solid red;
+}

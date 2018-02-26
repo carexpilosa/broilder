@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { updateData } from '../actions';
-import Sub from './Sub';
+import SearchField from './SearchField';
 
 class Test extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class Test extends React.Component {
       {
         Object.keys(this.props.data).map(k => <div key={k}>{k}</div>)
       }
-      <Sub callbF={this.boundCallBackFct} />
+      <SearchField callbF={this.boundCallBackFct} />
     </div>;
   }
 
