@@ -12,7 +12,9 @@ ReactDOM.render(
     <div>
       <Test />
       <hr />
-      <Flex />
+      {
+        //<Flex />
+      }
     </div>
   </Provider>,
   document.getElementById('app')

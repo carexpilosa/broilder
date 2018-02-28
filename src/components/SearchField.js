@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Sub extends React.Component {
+class SearchField extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -165,7 +165,7 @@ class Sub extends React.Component {
     this.setState({multiInputValues: newList });
   }
 
-  multiOnChange(e)  {
+  multiOnChange(e) {
     const val = e.target.value;
     const { multiInputValues, list } = this.state;
     if(list.includes(val)) {
@@ -226,4 +226,4 @@ class Sub extends React.Component {
   }
 }
 
-export default Sub;
+export default SearchField;

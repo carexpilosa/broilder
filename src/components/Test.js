@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { updateData } from '../actions';
-import SearchField from './SearchField';
+import SearchFieldDiv from './SearchFieldDiv';
+import DnD from './DnD';
 
 class Test extends React.Component {
   constructor(props) {
@@ -19,14 +20,13 @@ class Test extends React.Component {
   }
 
   render() {
-    console.log(`counter => ${this.state.counter}`);
     return <div>
       <h3>Test Component</h3>
       <input type="text" onChange={(e) => this.onInputChange(e)} />
       {
         Object.keys(this.props.data).map(k => <div key={k}>{k}</div>)
       }
-      <SearchField callbF={this.boundCallBackFct} />
+      <SearchFieldDiv callbF={this.boundCallBackFct} />
     </div>;
   }
 

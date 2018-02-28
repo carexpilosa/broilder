@@ -23,3 +23,44 @@
 .flexContainer > div {
   border: 1px solid red;
 }
+
+/************************************/
+
+.multipleDivsContainer {
+  display: flex;
+  width: 500px;
+  background-color: aquamarine;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.inputDiv {
+  border: 2px solid greenyellow;
+  flex: 10 10 500px;
+}
+
+
+.arrow {
+  cursor: pointer;
+  float: right;
+}
+
+.listDiv {
+  position: absolute;
+  width: 500px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+span.choice {
+  flex: 0 0 130px;
+  background-color: yellow;
+  margin: 4px;
+  cursor: pointer;
+}
